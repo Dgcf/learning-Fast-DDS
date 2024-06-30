@@ -139,6 +139,10 @@ namespace student
     {
         if (info.current_count_change == 1)
         {
+            std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+
+            timeLast_ = std::chrono::system_clock::to_time_t(now);
+
             matched_ = info.total_count;
             std::cout << "Subscriber matched." << std::endl;
         }
@@ -162,6 +166,12 @@ namespace student
         {
             if (info.instance_state == ALIVE_INSTANCE_STATE)
             {
+                if (timeLast_ + 3 > info.source_timestamp.seconds())
+                {
+                    return;
+                }
+
+                timeLast_ = info.source_timestamp.seconds();
                 samples_++;
                 // Print your structure data here.
                 std::cout << "Message " << hello_.name() << " " << hello_.id() << " RECEIVED" << std::endl;

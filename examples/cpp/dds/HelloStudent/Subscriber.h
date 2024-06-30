@@ -27,6 +27,8 @@
 #include <fastrtps/subscriber/SampleInfo.h>
 #include <fastdds/dds/core/status/SubscriptionMatchedStatus.hpp>
 
+#include <chrono>
+
 namespace student
 {
 
@@ -81,6 +83,7 @@ namespace student
             // void on_requested_deadline_missed(
             //     eprosima::fastdds::dds::DataReader *reader,
             //     const eprosima::fastrtps::RequestedDeadlineMissedStatus &status) override;
+            std::time_t timeLast_;
 
             StudentInfo hello_;
 
