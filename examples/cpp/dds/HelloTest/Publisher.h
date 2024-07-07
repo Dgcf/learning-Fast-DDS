@@ -80,8 +80,7 @@ namespace student
                 [[maybe_unused]] eprosima::fastdds::dds::DataWriter *writer,
                 [[maybe_unused]] const eprosima::fastdds::dds::OfferedDeadlineMissedStatus &status)
             {
-
-                std::cout << " offered_deadline_missed !" << std::endl;
+                printf(" offered_deadline_missed !\n");
             };
 
             int matched_;

@@ -82,7 +82,7 @@ namespace student
                 [[maybe_unused]] eprosima::fastdds::dds::DataReader *reader,
                 [[maybe_unused]] const eprosima::fastrtps::RequestedDeadlineMissedStatus &status) override
             {
-                std::cout << " requested_deadline_missed !" << std::endl;
+                printf("requested_deadline_missed !\n");
             };
 
             StudentInfo hello_;

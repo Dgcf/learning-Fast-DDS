@@ -42,8 +42,8 @@
 # add_subdirectory(TypeLookupService)
 # add_subdirectory(WriterLoansExample)
 # add_subdirectory(ZeroCopyExample)
- add_subdirectory(HelloStudent)
-# add_subdirectory(HelloTest)
+# add_subdirectory(HelloStudent)
+ add_subdirectory(HelloTest)
 
 if(SECURITY)
     add_subdirectory(SecureHelloWorldExample)
